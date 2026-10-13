@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Website</title>
+</head>
+<body>
+
+<div class="container">
+
+    <nav>
+        <header>
+            <div class="logo"> Xavier's Portfolio </div>
+        </header>
+
+        <button class = "hamburger" id = "hamburger">
+            ☰
+        </button>
+    
+
+        <ul id = navDropDown>
+        <li> <a href="#aboutMe" > About Me </a> </li>
+        <li> <a href="#projects"> Projects </a> </li>
+        <li> <a href="#experience"> Experience </a> </li>
+        <li> <a href="#education"> Education </a> </li>
+        <li> <a href="#blog"> Blog </a> </li>
+        </ul>
+    </nav>
+
+<!-- MAIN -->
+<main id="projects">
+    <h2>PROJECTS</h2>
+
+    <h3>Personal Portfolio Website</h3>
+
+    <img src="images/loading.jpg" alt="Preview of my portfolio website" id="projectIMG">
+
+    <p>
+        I created this portfolio to showcase my background,
+        skills, and experience while practicing web development.
+    </p>
+
+    <h4>Technologies Used</h4>
+
+        <p>HTML — Structuring the website</p>
+        <p>CSS Grid — Overall page layout</p>
+        <p>Flexbox — Aligning content</p>
+        <p>Media Queries — Mobile responsiveness</p>
+        <p>JavaScript — Hamburger navigation menu</p>
+
+    <h4>What I Learned</h4>
+    
+    <p>
+        This project helped me understand responsive layouts,
+        semantic HTML, and how to publish a website using GitHub Pages.
+    </p>
+</main>
+
+
+<!-- ABOUTME -->
+<aside id="aboutMe">
+    <h2>ABOUT ME</h2>
+
+    <img src = "images\profilepic.jpg" alt = "A photo of myself!" id = "aboutIMG">
+        
+    <h3>Hello, I'm Xavier!</h3>
+
+    <p>
+    I'm 21 years old and currently a junior at SVSU,
+    pursuing a degree in Computer Information Systems.
+    </p>
+
+    <p>
+    I'm interested in technology, information systems,
+    and learning how software can solve real-world problems.
+    </p>
+
+    <p>
+    My long-term goal is to work in a data analytics position
+    where I can use technology and data to help make decisions.
+    </p>
+</aside>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>EXPERIENCE</h2>
+
+    <img src = "images\loading.jpg" alt = "A photo of my experiences!" id = "experienceIMG">
+
+
+    <h3>Student Web Developer</h3>
+    <p><em>Personal and Academic Projects</em></p>
+
+    <p>
+        I have been developing my web development skills through
+        coursework and independent practice.
+    </p>
+
+    <h4>Skills I've Practiced</h4> 
+    <ul>
+        <li>Building web pages with HTML</li>
+        <li>Using CSS Grid and Flexbox</li>
+        <li>Creating responsive mobile layouts</li>
+        <li>Adding a hamburger menu with JavaScript</li>
+        <li>Publishing projects with GitHub Pages</li>
+    </ul>
+</section>
+
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>EDUCATION</h2>
+
+    <img src = "images\loading.jpg" alt = "A photo of my school!" id = "educationIMG">
+
+
+    <h3>Saginaw Valley State University</h3>
+    <p><em>BS in Computer Information Systems</em></p>
+
+    <p>
+        I am currently in my junior year, learning about
+        technology, information systems, and programming.
+    </p>
+
+    <h4><strong>My Goals</strong></h4>
+    <ul>
+        <li>Strengthen my programming skills</li>
+        <li>Learn more about databases and data analysis</li>
+        <li>Gain hands-on experience through projects</li>
+        <li>Prepare for a career in data analytics</li>
+    </ul>
+</section>
+
+
+<!-- BLOG -->
+<article id="blog">
+    <h2>BLOG</h2>
+
+    <img src="images/loading.jpg" alt="Web development project" id="blogIMG">
+
+    <h3>What I've Learned About Web Development</h3>
+
+    <p>
+        Building my portfolio has helped me understand how HTML
+        and CSS work together to create a website.
+    </p>
+
+    <h4>My Biggest Takeaways</h4>
+    <ul>
+        <li>Organizing content with semantic HTML</li>
+        <li>Making websites responsive with media queries</li>
+        <li>Fixing mistakes through debugging</li>
+    </ul>
+
+    <p>
+        I look forward to building more projects and improving
+        my web development skills.
+    </p>
+</article>
+
+
+<!-- FOOTER -->
+    <footer>
+        <p>
+            <strong>Xavier Wilson</strong> | Computer Information Systems Student
+        </p>
+
+        <p>
+            &copy; 2026 Xavier's Portfolio
+        </p>
+    </footer>
+</div> 
+
+<!-- javascript to make hamburger menu woek -->
+<script>
+    const hamburger = document.querySelector("#hamburger");
+    const navDropDown = document.querySelector("#navDropDown");
+
+    hamburger.addEventListener("click", () => {
+        if (navDropDown.style.display == "flex") {
+            navDropDown.style.display = "none";
+        } else {
+            navDropDown.style.display = "flex";
+        }
+    }
+);
+</script>
+
+</body>
+</html>

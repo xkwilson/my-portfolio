@@ -1,0 +1,269 @@
+/* ROOT */
+:root{
+    --main-radius: 5px;
+    --main-padding: 15px;
+    --main-gap: 0.5rem;
+    --box-sizing: border-box;
+    --lightgrey: lightgrey;
+    --white: white;
+    --black: black;
+    --lightgreen: rgb(68, 160, 68);
+    --charcoal: rgb(54, 54, 54);
+}
+
+/* BODY */
+body {
+    background-color: var(--white);
+    margin: 0;
+}
+
+/* .container */
+.container {
+
+    color: var(--lightgrey);
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.5fr 1fr 1fr 1fr;
+    gap: var(--main-gap);
+    padding: var(--main-padding);
+
+    grid-template-areas: 
+    
+        "nav nav nav nav"
+        "aboutMe projects projects projects"
+        "aboutMe experience education blog"
+        "footer footer footer footer"
+        ;
+
+}
+
+/* nav bar */
+nav{
+    grid-area: nav;
+
+    color: var(--white);
+    background: var(--charcoal);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* logo/pic in nav bar */
+.logo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* buttons in nav bar */
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* nav bar formatting */
+nav a{
+    color: var(--white);
+    text-decoration: none;
+}
+
+/* main */
+main{
+    grid-area: projects;
+    text-align: center;
+    color:var(--charcoal);
+    background: var(--lightgrey);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* aboutMe */
+#aboutMe{
+    grid-area: aboutMe;
+
+    color: var(--charcoal);
+    background: var(--lightgrey);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* experience */
+#experience{
+    grid-area: experience;
+
+    color: var(--charcoal);
+    background: var(--lightgrey);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* education */
+#education{
+    grid-area: education;
+
+    color: var(--charcoal);
+    background: var(--lightgrey);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* blog */
+#blog{
+    grid-area: blog;
+
+    color: var(--charcoal);
+    background: var(--lightgrey);
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* footer */
+footer{
+    grid-area: footer;
+    font-size: large;
+
+    color: var(--white);
+    background: var(--charcoal);    
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.hamburger {
+    display: none;
+    color: charcoal;
+    font-size: large;
+    cursor: pointer;
+}
+
+aside{
+ text-align: center;
+ font-size: x-large;
+}
+
+section {
+    text-align: center;
+ }
+
+.container p {
+    line-height: 1.5;
+}
+
+.container li {
+    margin-bottom: 6px;
+}
+
+/* Project layout */
+.project {
+    display: flex;
+    gap: 15px;
+}
+
+
+/* About Me picture  I REALIZE NOW THAT I 
+MAYBE COULD HAVE APPLIED THE COMMON TRAITS TO JUST ALL IMAGES*/
+#aboutIMG{
+    width: 250px;
+    height: 200px;
+    border-radius: 50%;
+    border: 3px solid var(--charcoal);
+
+}
+
+#projectIMG{
+    width: 300px;
+    border-radius: 20px;
+    border: 3px solid var(--charcoal);
+}
+
+#blogIMG{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    border: 3px solid var(--charcoal);
+}
+
+#experienceIMG {
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    border: 3px solid var(--charcoal);
+}
+
+#educationIMG {
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    border: 3px solid var(--charcoal);
+}
+
+article {
+    text-align: center;
+}
+
+/* for mobile*/
+@media only screen and (max-width: 500px) {
+
+    .container {
+
+    color: var(--white);
+    display: grid;
+    height: 100vh;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1fr 1fr 1fr;
+    gap: var(--main-gap);
+
+
+    grid-template-areas: 
+    
+    "nav"
+    "aboutMe"
+    "projects"
+    "experience"
+    "education"
+    "blog"
+    "footer"
+    ;
+    
+    }
+
+    /* show hamburger on mobile screen */
+    .hamburger {
+        display: block;
+        font-size: medium;
+    }
+
+    nav {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 15px;
+        width: 150px;
+        position: absolute;
+        top: 100%;
+        right: 10px;
+        padding: 10px;
+        background-color: var(--charcoal);
+        border-radius: 8px;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+    nav ul a {
+        display: block;
+        padding: 10px;
+    }
+}
